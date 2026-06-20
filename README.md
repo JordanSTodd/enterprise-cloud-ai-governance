@@ -27,5 +27,12 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * [View Azure RBAC Assignment](./azure-rbac-assignment.png)
 * [View Conditional Access MFA Policy](./entra-conditional-access-mfa.png)
 
-## Phase 3: AI Governance & Data Loss Prevention (AB-900 Focus)
-*(Microsoft Purview and Copilot administration policies coming soon)*
+### Phase 3: AI SaaS Rollout & Data Governance (AB-900 / Purview Focus)
+**Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction of confidential corporate data.
+
+**Technical Execution:**
+* 🛡️ **Information Protection:** Engineered a Microsoft Purview Sensitivity Label (`Confidential-Finance`) to classify and encrypt highly sensitive financial datasets.
+* 🤖 **AI Governance:** Configured specific data loss prevention (DLP) guardrails to block AI Copilot indexing on labeled files, ensuring artificial intelligence agents cannot bypass human security clearances. 
+
+**Project Evidence:**
+* [View Purview Data Governance Label](./purview-sensitivity-label.png)
