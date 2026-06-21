@@ -22,16 +22,18 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 **Objective:** Secure the cloud foundation by establishing robust identity management and a programmatic security perimeter.
 
 **Technical Execution:**
-* 💻 **Automated Identity Provisioning:** Executed a PowerShell automation script utilizing the Microsoft Graph API to programmatically deploy simulated corporate departments into Entra ID.
+* 💻 **Automated Identity Provisioning:** Executed a PowerShell automation script utilizing the Microsoft Graph API (`New-MgUser`) to programmatically deploy simulated corporate departments into Entra ID.
 * ⚙️ **Dynamic Group Automation:** Engineered an Entra ID Dynamic Security Group (`Auto-Finance-Team`) utilizing attribute-based queries (`user.department -eq "Finance"`) to automate user lifecycle management and access provisioning.
 * 🔐 **Role-Based Access Control (RBAC):** Enforced the Principle of Least Privilege by assigning targeted `Network Contributor` permissions to specific administrative accounts.
-* 🛑 **Zero Trust Architecture:** Disabled baseline security defaults to engineer a custom Conditional Access policy, strictly enforcing Multi-Factor Authentication (MFA) for privileged cloud identities.
+* 🛑 **Zero Trust Architecture:** Disabled baseline security defaults to engineer a custom Conditional Access policy (`Require-MFA-Privileged-Roles`), strictly enforcing Multi-Factor Authentication (MFA) for privileged cloud identities.
+* ⏱️ **Privileged Access:** Configured Privileged Identity Management (PIM) for the `Global Administrator` role, enforcing Just-In-Time (JIT) access with a maximum `2-hour` activation window, requiring Azure MFA and written justification.
 
 **Project Evidence:**
 * [View API Execution & Verification](./powershell-graph-api-provisioning.png)
 * [View Dynamic Group Automation](./entra-dynamic-group.png)
 * [View Azure RBAC Assignment](./azure-rbac-assignment.png)
 * [View Conditional Access MFA Policy](./entra-conditional-access-mfa.png)
+* [View Privileged Identity Management Guardrails](./pim-jit-activation.png)
 
 ### Phase 3: AI SaaS Rollout & Data Governance (AB-900 / Purview Focus)
 **Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction and exfiltration of confidential corporate data.
