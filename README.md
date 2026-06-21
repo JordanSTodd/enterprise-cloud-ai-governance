@@ -40,5 +40,5 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * ⚙️ **DLP Logic Enforced:** Configured pattern-matching for Sensitive Information Types (SITs) targeting `U.S. Bank Account` and `Credit Card Number` parameters within a custom rule (`Enforce Financial Data Protection`), programmatically blocking external sharing while satisfying mandatory Microsoft user notifications.
 
 **Project Evidence:**
-* [View Purview Data Governance Label](./purview-sensitivity-label.png)
+* [View Purview Data Governance Label](./purview-sensitivity-label.png?v=1)
 * [View Data Loss Prevention Logic Setup](./purview-dlp-policy.png)
