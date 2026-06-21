@@ -27,6 +27,7 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * 🔐 **Role-Based Access Control (RBAC):** Enforced the Principle of Least Privilege by assigning targeted `Network Contributor` permissions to specific administrative accounts.
 * 🛑 **Zero Trust Architecture:** Disabled baseline security defaults to engineer a custom Conditional Access policy (`Require-MFA-Privileged-Roles`), strictly enforcing Multi-Factor Authentication (MFA) for privileged cloud identities.
 * ⏱️ **Privileged Access:** Configured Privileged Identity Management (PIM) for the `Global Administrator` role, enforcing Just-In-Time (JIT) access with a maximum `2-hour` activation window, requiring Azure MFA and written justification.
+* 🛡️ **Attack Surface Reduction:** Deployed a Conditional Access policy (`Block-Legacy-Authentication`) targeting all cloud apps to strictly block legacy authentication protocols (e.g., Exchange ActiveSync), mitigating MFA bypass vulnerabilities while retaining a break-glass admin exclusion.
 
 **Project Evidence:**
 * [View API Execution & Verification](./powershell-graph-api-provisioning.png)
@@ -34,6 +35,7 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * [View Azure RBAC Assignment](./azure-rbac-assignment.png)
 * [View Conditional Access MFA Policy](./entra-conditional-access-mfa.png)
 * [View Privileged Identity Management Guardrails](./pim-jit-activation.png)
+* [View Legacy Authentication Block Policy](./ca-block-legacy-auth.png)
 
 ### Phase 3: AI SaaS Rollout & Data Governance (AB-900 / Purview Focus)
 **Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction and exfiltration of confidential corporate data.
