@@ -32,11 +32,13 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * [View Conditional Access MFA Policy](./entra-conditional-access-mfa.png)
 
 ### Phase 3: AI SaaS Rollout & Data Governance (AB-900 / Purview Focus)
-**Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction of confidential corporate data.
+**Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction and exfiltration of confidential corporate data.
 
 **Technical Execution:**
-* 🛡️ **Information Protection:** Engineered a Microsoft Purview Sensitivity Label (`Confidential-Finance`) to classify and encrypt highly sensitive financial datasets.
-* 🤖 **AI Governance:** Configured specific data loss prevention (DLP) guardrails to block AI Copilot indexing on labeled files, ensuring artificial intelligence agents cannot bypass human security clearances. 
+* 🛡️ **Information Protection:** Engineered a Microsoft Purview Sensitivity Label (`Confidential-Finance`) to classify and encrypt highly sensitive financial datasets, ensuring artificial intelligence agents cannot bypass human security clearances.
+* 🛑 **Data Loss Prevention (DLP):** Designed an enterprise-wide DLP policy (`Block-External-Financial-Data`) to monitor and block the transmission of high-risk data. 
+* ⚙️ **DLP Logic Enforced:** Configured pattern-matching for Sensitive Information Types (SITs) targeting `U.S. Bank Account` and `Credit Card Number` parameters within a custom rule (`Enforce Financial Data Protection`), programmatically blocking external sharing while satisfying mandatory Microsoft user notifications.
 
 **Project Evidence:**
 * [View Purview Data Governance Label](./purview-sensitivity-label.png)
+* [View Data Loss Prevention Logic Setup](./purview-dlp-policy.png)
