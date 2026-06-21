@@ -10,11 +10,13 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * 🏗️ **Resource Management:** Deployed a centralized Azure Resource Group (`rg-enterprise-foundation`) in the East US region to logically contain and manage the lifecycle of foundational assets.
 * 🌐 **Virtual Networking (VNet):** Engineered a secure Virtual Network (`vnet-enterprise-primary`) utilizing a standard `10.0.0.0/16` IP address space to facilitate isolated internal routing and future subnetting.
 * 🔒 **Cloud Governance:** Deployed an Azure Resource Lock (`Delete` type) to the foundational resource group, strictly preventing accidental or unauthorized deletion of mission-critical cloud infrastructure.
+* 📉 **Financial Governance:** Engineered an automated cloud spend guardrail by deploying a strict `$1.00` Azure Budget Alert (`Zero-Cost-Guardrail`) to instantaneously trigger email notifications upon any billing deviations.
 
 **Project Evidence:**
 * [View Azure Resource Group Deployment](./azure-rg-foundation.png)
 * [View Virtual Network Deployment](./azure-vnet-deployment.png)
 * [View Azure Resource Lock](./azure-resource-lock.png)
+* [View Cost Management Budget Guardrail](./azure-budget-alert.png)
 
 ### Phase 2: Identity & Security Perimeter (SC-900 / SC-300 Focus)
 **Objective:** Secure the cloud foundation by establishing robust identity management and a programmatic security perimeter.
