@@ -3,6 +3,15 @@
 ## Project Overview
 This project simulates the end-to-end deployment of a secure corporate cloud environment. It is divided into three phases, demonstrating practical execution of Microsoft's core cloud, security, and administrative frameworks.
 
+### Technologies & Cloud Services Utilized
+| Category | Technologies & Microsoft Services |
+| :--- | :--- |
+| **Core Infrastructure** | Azure Virtual Networks (VNet), Azure Resource Groups |
+| **Identity & Access** | Microsoft Entra ID, Azure RBAC, Dynamic Security Groups |
+| **Zero Trust Security** | Conditional Access, Privileged Identity Management (PIM), MFA |
+| **Automation** | PowerShell, Microsoft Graph API |
+| **Data Governance** | Microsoft Purview, Sensitivity Labels, Data Loss Prevention (DLP) |
+
 ### Phase 1: The Foundation & Governance (AZ-900 Focus)
 **Objective:** Provision the core Azure infrastructure to establish a secure, software-defined network boundary, and apply strict governance controls to protect foundational assets.
 
