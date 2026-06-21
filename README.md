@@ -21,11 +21,13 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 
 **Technical Execution:**
 * 💻 **Automated Identity Provisioning:** Executed a PowerShell automation script utilizing the Microsoft Graph API to programmatically deploy simulated corporate departments into Entra ID.
+* ⚙️ **Dynamic Group Automation:** Engineered an Entra ID Dynamic Security Group (`Auto-Finance-Team`) utilizing attribute-based queries (`user.department -eq "Finance"`) to automate user lifecycle management and access provisioning.
 * 🔐 **Role-Based Access Control (RBAC):** Enforced the Principle of Least Privilege by assigning targeted `Network Contributor` permissions to specific administrative accounts.
 * 🛑 **Zero Trust Architecture:** Disabled baseline security defaults to engineer a custom Conditional Access policy, strictly enforcing Multi-Factor Authentication (MFA) for privileged cloud identities.
 
 **Project Evidence:**
 * [View API Execution & Verification](./powershell-graph-api-provisioning.png)
+* [View Dynamic Group Automation](./entra-dynamic-group.png)
 * [View Azure RBAC Assignment](./azure-rbac-assignment.png)
 * [View Conditional Access MFA Policy](./entra-conditional-access-mfa.png)
 
