@@ -3,6 +3,7 @@
 ## Project Overview
 This project simulates the end-to-end deployment of a secure corporate cloud environment. It is divided into three phases, demonstrating practical execution of Microsoft's core cloud, security, and administrative frameworks.
 
+
 ### Phase 1: The Foundation & Governance (AZ-900 Focus)
 **Objective:** Provision the core Azure infrastructure to establish a secure, software-defined network boundary, and apply strict governance controls to protect foundational assets.
 
@@ -17,6 +18,7 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * [View Virtual Network Deployment](./azure-vnet-deployment.png)
 * [View Azure Resource Lock](./azure-resource-lock.png)
 * [View Cost Management Budget Guardrail](./azure-budget-alert.png)
+
 
 ### Phase 2: Identity & Security Perimeter (SC-900 / SC-300 Focus)
 **Objective:** Secure the cloud foundation by establishing robust identity management and a programmatic security perimeter.
@@ -39,6 +41,7 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * [View Legacy Authentication Block Policy](./ca-block-legacy-auth.png)
 * [View Automated Access Review Configuration](./entra-access-review.png)
 
+
 ### Phase 3: AI SaaS Rollout & Data Governance (AB-900 / Purview Focus)
 **Objective:** Establish a secure data boundary prior to deploying AI tools (like Microsoft 365 Copilot) to prevent unauthorized extraction and exfiltration of confidential corporate data.
 
@@ -46,7 +49,11 @@ This project simulates the end-to-end deployment of a secure corporate cloud env
 * 🛡️ **Information Protection:** Engineered a Microsoft Purview Sensitivity Label (`Confidential-Finance`) to classify and encrypt highly sensitive financial datasets, ensuring artificial intelligence agents cannot bypass human security clearances.
 * 🛑 **Data Loss Prevention (DLP):** Designed an enterprise-wide DLP policy (`Block-External-Financial-Data`) to monitor and block the transmission of high-risk data. 
 * ⚙️ **DLP Logic Enforced:** Configured pattern-matching for Sensitive Information Types (SITs) targeting `U.S. Bank Account` and `Credit Card Number` parameters within a custom rule (`Enforce Financial Data Protection`), programmatically blocking external sharing while satisfying mandatory Microsoft user notifications.
+* 📜 **AI Governance & Compliance:** Authored and deployed a custom Entra ID Terms of Use document (`Generative-AI-Acceptable-Use-Policy`) establishing strict data privacy guardrails for enterprise AI utilization.
+* 🚧 **Conditional Access Gateway:** Engineered a Conditional Access policy (`Enforce-AI-Terms-of-Use`) targeting `Office 365` applications to serve as a programmatic gateway, strictly forcing users to read, expand, and explicitly consent to the AI ToU prior to accessing Copilot or Microsoft 365 services.
 
 **Project Evidence:**
 * [View Purview Data Governance Label](./purview-sensitivity-label.png?v=1)
 * [View Data Loss Prevention Logic Setup](./purview-dlp-policy.png)
+* [View AI Acceptable Use Policy Configuration](./entra-ai-terms-of-use.png)
+* [View Terms of Use Conditional Access Gateway](./ca-enforce-ai-tou.png)
